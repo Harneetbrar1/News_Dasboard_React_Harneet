@@ -20,13 +20,28 @@ const NewsCard = ({ article, onBookmark, isBookmarked = false }) => {
   };
 
   return (
-    <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+    <Card
+      sx={{
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        transition: "transform 0.2s",
+        "&:hover": {
+          transform: "translateY(-4px)",
+          boxShadow: 4,
+        },
+      }}
+    >
       {article.urlToImage && (
         <CardMedia
           component="img"
           height="200"
           image={article.urlToImage}
           alt={article.title}
+          sx={{ objectFit: "cover" }}
+          onError={(e) => {
+            e.target.style.display = "none";
+          }}
         />
       )}
 

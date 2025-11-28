@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Project planning files (not for submission)
+PROJECT_PLAN.md
+FLOW.md
