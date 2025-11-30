@@ -26,7 +26,7 @@ const Home = ({ addBookmark, isBookmarked }) => {
     setError(null);
     try {
       const data = await fetchNews({
-        category: query ? undefined : "general",
+        category: query ? undefined : "world",
         searchQuery: query,
       });
       setArticles(data.articles);
