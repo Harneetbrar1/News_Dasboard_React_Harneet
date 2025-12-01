@@ -32,8 +32,10 @@ const Navbar = ({ bookmarksCount = 0 }) => {
 
   return (
     <AppBar position="sticky" sx={{ top: 0 }}>
-      <Toolbar>
-        <Newspaper sx={{ mr: 2 }} />
+      <Toolbar sx={{ minHeight: { xs: 56, sm: 64 } }}>
+        <Newspaper
+          sx={{ mr: { xs: 1, sm: 2 }, fontSize: { xs: 20, sm: 24 } }}
+        />
         <Typography
           variant="h6"
           component={Link}
@@ -42,7 +44,11 @@ const Navbar = ({ bookmarksCount = 0 }) => {
             flexGrow: isMobile ? 1 : 0,
             textDecoration: "none",
             color: "inherit",
-            mr: 4,
+            mr: { xs: 0, md: 4 },
+            fontSize: { xs: "1rem", sm: "1.25rem" },
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
         >
           📰 News Dashboard
@@ -94,9 +100,14 @@ const Navbar = ({ bookmarksCount = 0 }) => {
           color="inherit"
           startIcon={
             <Badge badgeContent={bookmarksCount} color="secondary">
-              <Bookmark />
+              <Bookmark sx={{ fontSize: { xs: 20, sm: 24 } }} />
             </Badge>
           }
+          sx={{
+            minWidth: { xs: "auto", sm: 64 },
+            px: { xs: 1, sm: 2 },
+            fontSize: { xs: "0.875rem", sm: "0.875rem" },
+          }}
         >
           {!isMobile ? "Bookmarks" : ""}
         </Button>

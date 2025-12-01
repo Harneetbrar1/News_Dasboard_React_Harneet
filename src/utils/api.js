@@ -36,6 +36,7 @@ const buildUrl = (params = {}) => {
 
 // Transform Guardian article to our format
 const transformArticle = (article) => {
+  //  console.log("Raw Guardian article:", article);
   return {
     title: article.webTitle,
     description: article.fields?.bodyText?.substring(0, 200) + '...' || 'No description available',
