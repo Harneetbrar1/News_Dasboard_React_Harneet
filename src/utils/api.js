@@ -85,11 +85,4 @@ export const fetchNews = async ({ category, searchQuery }) => {
   }
 };
 
-// For backward compatibility
-export const fetchTopHeadlines = async (category = 'world') => {
-  return fetchNews({ category });
-};
 
-export const searchNews = async (query) => {
-  return fetchNews({ searchQuery: query });
-};
