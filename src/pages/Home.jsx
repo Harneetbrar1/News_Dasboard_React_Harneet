@@ -60,7 +60,10 @@ const Home = ({ addBookmark, isBookmarked }) => {
               <Button
                 color="inherit"
                 size="small"
-                onClick={() => loadNews(searchQuery)}
+                onClick={() => {
+                  setSearchQuery("");
+                  loadNews("");
+                }}
               >
                 RETRY
               </Button>
