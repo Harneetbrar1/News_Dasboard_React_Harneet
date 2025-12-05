@@ -1,7 +1,7 @@
 // API Configuration for The Guardian
 const API_CONFIG = {
   BASE_URL: 'https://content.guardianapis.com',
-  API_KEY: 'd6f2cf02-f30e-4d41-9260-7958dae609a4',
+  API_KEY: import.meta.env.VITE_GUARDIAN_API_KEY,
   DEFAULT_PAGE_SIZE: 20
 };
 
